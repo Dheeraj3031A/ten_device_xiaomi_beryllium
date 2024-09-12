@@ -717,12 +717,6 @@
     <dimen name="status_bar_height_landscape">86.0px</dimen>
     <dimen name="rounded_corner_radius">40dp</dimen>
 
-    <!-- Whether to show vendor mismatch message. -->
-    <bool name="config_show_vendor_mismatch_message">false</bool>
-
-    <!-- Whether device has a notch -->
-    <bool name="config_haveNotch">true</bool>
-
     <!-- Display mode remapping table.
          If the mode names returned by the backend do not match
          the predefined and translated strings in the Settings
@@ -742,7 +736,7 @@
     <!-- Default value for proximity check on screen wake
      NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)-->
     <bool name="config_proximityCheckOnWake">true</bool>
-    <integer name="config_proximityCheckTimeout">300</integer>
+    <integer name="config_proximityCheckTimeout">100</integer>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
 
     <!-- Whether device has a physical display cutout -->
@@ -750,12 +744,7 @@
 
     <!-- Do not translate. Default access point SSID used for tethering -->
     <string name="wifi_tether_configure_ssid_default" translatable="false">Poco F1</string>
-
-    <!-- Smart charge sysfs node and value for suspend/resume charging-->
-    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
-    <string name="config_SmartChargingSupspendValue" translatable="false">1</string>
-    <string name="config_SmartChargingResumeValue" translatable="false">0</string>
-
+	
     <!-- List supported color modes. -->
     <integer-array name="config_availableColorModes">
         <item>0</item> <!-- COLOR_MODE_NATURAL -->
@@ -763,4 +752,10 @@
         <item>2</item> <!-- COLOR_MODE_SATURATED -->
         <item>3</item> <!-- COLOR_MODE_AUTOMATIC -->
     </integer-array>
+
+    <!-- Smart charging -->
+    <bool name="config_smartChargingAvailable">true</bool>
+    <string name="config_smartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
+    <string name="config_smartChargingSuspendValue" translatable="false">1</string>
+    <string name="config_smartChargingResumeValue" translatable="false">0</string>
 </resources>

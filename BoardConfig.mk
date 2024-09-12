@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2020 The LineageOS Project
+# Copyright (C) 2018-2021 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -24,15 +24,19 @@ BOARD_HAVE_QCOM_FM := true
 
 # Display
 TARGET_SCREEN_DENSITY := 440
+TARGET_HAS_HDR_DISPLAY := true
+TARGET_HAS_WIDE_COLOR_DISPLAY := true
+TARGET_USES_COLOR_METADATA := true
+TARGET_USES_DRM_PP := true
 
 # Kernel
-TARGET_KERNEL_CONFIG := beryllium_defconfig
+TARGET_KERNEL_CONFIG += beryllium_defconfig
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Partitions
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67092480
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
